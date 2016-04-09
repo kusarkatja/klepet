@@ -18,6 +18,7 @@ a {
   margin-bottom: 1em;
 }
 
+
 #sporocila {
   width: 85%;
   height: 300px;
@@ -44,7 +45,16 @@ a {
   cursor: pointer;
 }
 
+#seznam-uporabnikov div {
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
 #seznam-kanalov div:hover {
+  background-color: #ddd;
+}
+
+#seznam-uporabnikov div:hover {
   background-color: #ddd;
 }
 

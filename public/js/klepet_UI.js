@@ -72,7 +72,8 @@ $(document).ready(function() {
     $('#kanal').text(trenutniVzdevek + " @ " + trenutniKanal);
     $('#sporocila').append(divElementHtmlTekst('Sprememba kanala.'));
   });
-
+  
+  
   socket.on('sporocilo', function (sporocilo) {
     var novElement = divElementEnostavniTekst(sporocilo.besedilo);
     $('#sporocila').append(novElement);
@@ -99,6 +100,12 @@ $(document).ready(function() {
     for (var i=0; i < uporabniki.length; i++) {
       $('#seznam-uporabnikov').append(divElementEnostavniTekst(uporabniki[i]));
     }
+   
+    $('#seznam-uporabnikov div').click(function() {
+      $('#poslji-sporocilo').focus();
+      $('#poslji-sporocilo').val('/zasebno "'+ $(this).text() + '" ');
+    });
+   
   });
 
   setInterval(function() {
